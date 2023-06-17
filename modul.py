@@ -28,7 +28,7 @@ class Fight:
 
     def attack_p_1(self):
         if self.p_2.p_class == 3:
-            if randint(1, 4) == 1:
+            if randint(1, 2) == 1:
                 print(f"{self.p_2.name} Увернулся")
                 return ""
         if self.p_1.p_class == 1:
