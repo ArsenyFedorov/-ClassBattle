@@ -6,8 +6,10 @@ from time import sleep
 
 
 class Start:
+    """этот класс это какая то херня которая была сделана на основе файла control.py"""
 
     def start_game(self):
+        """Запускает игру """
         self.p_1 = Player(input_data(name_player), input_class())
         self.p_2 = Player(input_data(name_player), input_class())
         self.p_1.xp_player()
@@ -53,9 +55,11 @@ class Start:
                     sleep(5)
 
     def exit_game(self):
+        """Ну тут и так понятно что делает эта функция """
         print_message(game_over)
 
     def game_progress(self):
+        """Эта функция запускает игру"""
         while True:
             p_com = starting()
             match p_com:

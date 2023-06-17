@@ -2,6 +2,7 @@ from random import choice, randint
 
 
 class Player:
+    """Этот класс создаёт война по требованию пользователя"""
     def __init__(self, name: str, p_class: int):
         self.name = name
         self.p_class = p_class
@@ -22,6 +23,7 @@ class Player:
 
 
 class Fight:
+    """Этот класс заставляет драться двух войнов"""
     def __init__(self, p_1, p_2):
         self.p_1 = p_1
         self.p_2 = p_2

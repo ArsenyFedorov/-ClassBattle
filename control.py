@@ -6,6 +6,7 @@ from time import sleep
 
 
 def start():
+    """В этой функции происходят все события от начала игры до самой драки"""
     while True:
         p_com = starting()
         match p_com:

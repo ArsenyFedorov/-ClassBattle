@@ -2,6 +2,7 @@ from text import *
 
 
 def starting():
+    """Эта функция запускает меню выбора"""
     print(start_game)
     p_com = input(user_comand).strip()
     if p_com.isdigit() and 0 < int(p_com) < 3:
@@ -11,12 +12,14 @@ def starting():
 
 
 def print_message(message):
+    # Эта функция выводит какое то сообщение
     print("=" * len(message))
     print(message)
     print("=" * len(message))
 
 
 def input_data(message: str) -> str:
+    """Эта функция собирает данные """
     while True:
         print("=" * len(message))
         data = input(message).strip()
@@ -27,6 +30,7 @@ def input_data(message: str) -> str:
 
 
 def input_class() -> int:
+    """Эта функция собирает данные классов """
     while True:
         print(person_class)
         u_class = input(user_comand).strip()
@@ -40,5 +44,6 @@ def input_class() -> int:
 
 
 def fight_users(message: str, name: str):
+    """Эта функция выводит данные боя """
     print(message + name)
 
