@@ -22,14 +22,14 @@ def start():
                     fight_users(first_attack, player_1.name)
                     fight = Fight(player_1, player_2)
                     while True:
-                        fight.attack_p_1()
+                        fight.attack_player(player_1, player_2)
                         if fight.p_2.xp <= 0:
                             fight_users(win, player_1.name)
                             break
                         else:
                             print(f"У {player_2.name} осталось {fight.p_2.xp} xp")
                             sleep(5)
-                        fight.attack_p_2()
+                        fight.attack_player(player_2, player_1)
                         if fight.p_1.xp <= 0:
                             fight_users(win, player_2.name)
                             break
@@ -40,14 +40,14 @@ def start():
                     fight_users(first_attack, player_2.name)
                     fight = Fight(player_1, player_2)
                     while True:
-                        fight.attack_p_2()
+                        fight.attack_player(player_2, player_1)
                         if fight.p_1.xp <= 0:
                             fight_users(win, player_2.name)
                             break
                         else:
                             print(f"У {player_1.name} осталось {fight.p_1.xp} xp")
                             sleep(5)
-                        fight.attack_p_1()
+                        fight.attack_player(player_1, player_2)
                         if fight.p_2.xp <= 0:
                             fight_users(win, player_1.name)
                             break

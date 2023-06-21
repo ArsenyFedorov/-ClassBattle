@@ -28,38 +28,20 @@ class Fight:
         self.p_1 = p_1
         self.p_2 = p_2
 
-    def attack_p_1(self):
-        if self.p_2.p_class == 3:
+    def attack_player(self, p_1, p_2):
+        if p_2.p_class == 3:
             if randint(1, 2) == 1:
-                print(f"{self.p_2.name} Увернулся")
+                print(f"{p_2.name} Увернулся")
                 return ""
-        if self.p_1.p_class == 1:
+        if p_1.p_class == 1:
             damage = randint(15, 30)
-            self.p_2.xp -= damage
+            p_2.xp -= damage
             print(f"{self.p_1.name} Снёс {damage}xp")
-        elif self.p_1.p_class == 2:
+        elif p_1.p_class == 2:
             damage = randint(30, 50)
-            self.p_2.xp -= damage
-            print(f"{self.p_1.name} Снёс {damage}xp")
+            p_2.xp -= damage
+            print(f"{p_1.name} Снёс {damage}xp")
         else:
             damage = randint(10, 25)
-            self.p_2.xp -= damage
-            print(f"{self.p_1.name} Снёс {damage}xp")
-
-    def attack_p_2(self):
-        if self.p_1.p_class == 3:
-            if randint(1, 4) == 1:
-                print(f"{self.p_1.name} Увернулся")
-                return ""
-        if self.p_2.p_class == 1:
-            damage = randint(15, 30)
-            self.p_1.xp -= damage
-            print(f"{self.p_2.name} Снёс {damage}xp")
-        elif self.p_2.p_class == 2:
-            damage = randint(30, 50)
-            self.p_1.xp -= damage
-            print(f"{self.p_2.name} Снёс {damage}xp")
-        else:
-            damage = randint(10, 25)
-            self.p_1.xp -= damage
-            print(f"{self.p_2.name} Снёс {damage}xp")
+            p_2.xp -= damage
+            print(f"{p_1.name} Снёс {damage}xp")
